@@ -1,6 +1,6 @@
 import React from "react";
 import "./FavoriteList.css";
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 const FavoriteList = ({ favoriteList, inputValue }) => {
   return (
     <div className="favorite">
@@ -16,7 +16,7 @@ const FavoriteList = ({ favoriteList, inputValue }) => {
             </div>
           ))}
           
-          <NavLink style={{color:'white'}} to="/">Home</NavLink>
+          <Link style={{color:'white'}} to="/">Home</Link>
         </div>
       ) : (
         <p>No favorite movies added.</p>
