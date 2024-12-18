@@ -16,7 +16,7 @@ const FavoriteList = ({ favoriteList, inputValue }) => {
             </div>
           ))}
           
-          <button style={{color:'white'}}><a href="/">Home</a></button>
+          <NavLink style={{color:'white'}} to="/">Home</NavLink>
         </div>
       ) : (
         <p>No favorite movies added.</p>
