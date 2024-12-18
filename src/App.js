@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Router ,Routes, Route } from "react-router-dom";
 import Main from "./Components/Main";
 import FavoriteList from "./Components/FavoriteList";
 import Header from "./Components/Header";
@@ -20,25 +20,27 @@ const App = () => {
   return (
     <div className="App">
       <Header />
+      <Router basename="/copy-project-four">
       <Routes>
         <Route
           path="/"
           element={
             <Main 
-              movieData={movieData} 
-              favoriteList={favoriteList} 
-              setFavoriteList={setFavoriteList} 
-              inputValue={inputValue} 
-              setInputValue={setInputValue}
-              setMovieSearch={setMovieSearch}
+            movieData={movieData} 
+            favoriteList={favoriteList} 
+            setFavoriteList={setFavoriteList} 
+            inputValue={inputValue} 
+            setInputValue={setInputValue}
+            setMovieSearch={setMovieSearch}
             />
           }
-        />
+          />
         <Route
           path="/favorite"
           element={<FavoriteList favoriteList={favoriteList} inputValue={inputValue} />}
-        />
+          />
       </Routes>
+          </Router>
     </div>
   );
 };
